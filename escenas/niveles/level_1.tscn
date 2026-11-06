@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://k177evni2o1b"]
+
+[ext_resource type="PackedScene" uid="uid://bc4lm64utq0xi" path="res://escenas/piso.tscn" id="1_w5h3r"]
+[ext_resource type="PackedScene" uid="uid://bnlw5bcwf5t2d" path="res://escenas/personaje.tscn" id="2_ca301"]
+[ext_resource type="PackedScene" uid="uid://cmge3csni42fp" path="res://escenas/cubo_piso.tscn" id="3_40khw"]
+[ext_resource type="PackedScene" uid="uid://bj1spkr4t3g2f" path="res://escenas/puas.tscn" id="4_vb61s"]
+
+[node name="level1" type="Node2D" unique_id=1435711865]
+
+[node name="Piso" parent="." unique_id=2062316873 instance=ExtResource("1_w5h3r")]
+
+[node name="personaje" parent="." unique_id=1674421187 instance=ExtResource("2_ca301")]
+position = Vector2(-1423, -56)
+
+[node name="cubos" type="Node2D" parent="." unique_id=291563225]
+
+[node name="cuboPiso" parent="cubos" unique_id=989623139 instance=ExtResource("3_40khw")]
+position = Vector2(-864, -48)
+
+[node name="cuboPiso2" parent="cubos" unique_id=949482617 instance=ExtResource("3_40khw")]
+position = Vector2(-672, -112)
+
+[node name="puas" parent="." unique_id=1459038831 instance=ExtResource("4_vb61s")]
+position = Vector2(-223.99998, -40)

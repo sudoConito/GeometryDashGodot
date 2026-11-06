@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cmge3csni42fp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvskb"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_c6wpt"]
+
+[node name="cuboPiso" type="StaticBody2D" unique_id=989623139]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(3.16, 3.195)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1105775636]
+shape = SubResource("RectangleShape2D_dvskb")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D" unique_id=1064558737]
+scale = Vector2(20, 20)
+mesh = SubResource("QuadMesh_c6wpt")
