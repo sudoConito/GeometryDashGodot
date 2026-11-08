@@ -5,6 +5,7 @@
 [sub_resource type="QuadMesh" id="QuadMesh_c6wpt"]
 
 [node name="Piso" type="StaticBody2D" unique_id=2062316873]
+z_index = 1
 scale = Vector2(200, 1.58)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=153220178]

@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bnlw5bcwf5t2d" path="res://escenas/personaje.tscn" id="2_ca301"]
 [ext_resource type="PackedScene" uid="uid://cmge3csni42fp" path="res://escenas/cubo_piso.tscn" id="3_40khw"]
 [ext_resource type="PackedScene" uid="uid://bj1spkr4t3g2f" path="res://escenas/puas.tscn" id="4_vb61s"]
+[ext_resource type="PackedScene" uid="uid://d0ejlsjcb5w5p" path="res://escenas/impulsador.tscn" id="5_cee2x"]
+[ext_resource type="PackedScene" uid="uid://ciftyy8pgayvp" path="res://escenas/doble_salto.tscn" id="6_ga0w4"]
 
 [node name="level1" type="Node2D" unique_id=1435711865]
 
@@ -21,4 +23,14 @@ position = Vector2(-864, -48)
 position = Vector2(-672, -112)
 
 [node name="puas" parent="." unique_id=1459038831 instance=ExtResource("4_vb61s")]
-position = Vector2(-223.99998, -40)
+position = Vector2(-508.99994, -40)
+
+[node name="impulsadores" type="Node2D" parent="." unique_id=1794458028]
+
+[node name="impulsador" parent="impulsadores" unique_id=1455955815 instance=ExtResource("5_cee2x")]
+position = Vector2(-162, -18)
+
+[node name="doblesSaltos" type="Node2D" parent="." unique_id=743672511]
+
+[node name="doble_salto" parent="doblesSaltos" unique_id=1667797747 instance=ExtResource("6_ga0w4")]
+position = Vector2(-589, -160)

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ciftyy8pgayvp"]
+
+[ext_resource type="Script" uid="uid://bt43mtl4skxtn" path="res://scripts/doble_salto.gd" id="1_b4be1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jytih"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ncmtp"]
+
+[node name="doble_salto" type="Area2D" unique_id=1667797747]
+scale = Vector2(2, 2)
+script = ExtResource("1_b4be1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1798651029]
+shape = SubResource("CircleShape2D_jytih")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D" unique_id=1870998764]
+modulate = Color(1, 0.35686275, 0.23921569, 1)
+position = Vector2(0, 1.9073486e-06)
+scale = Vector2(20.022678, 20.000004)
+mesh = SubResource("SphereMesh_ncmtp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

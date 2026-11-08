@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d0ejlsjcb5w5p"]
+
+[ext_resource type="Script" uid="uid://5jfcqyisb4b3" path="res://scripts/impulsador.gd" id="1_bmqrf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jytih"]
+size = Vector2(20, 2)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ncmtp"]
+
+[node name="impulsador" type="Area2D" unique_id=1455955815]
+scale = Vector2(3, 2)
+script = ExtResource("1_bmqrf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1964712517]
+shape = SubResource("RectangleShape2D_jytih")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D" unique_id=782290558]
+modulate = Color(1, 1, 0, 1)
+scale = Vector2(20, 1.9999999)
+mesh = SubResource("QuadMesh_ncmtp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

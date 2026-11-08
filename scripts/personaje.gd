@@ -20,7 +20,7 @@ func _physics_process(delta):
 
 	# Salto (mantener presionado = salta de nuevo al aterrizar)
 	if Input.is_action_pressed("ui_accept") and is_on_floor():
-		velocity.y = -fuerza_salto
+		impulso(fuerza_salto)
 
 	move_and_slide()
 	_rotar(delta)
@@ -30,7 +30,8 @@ func _physics_process(delta):
 		print(intentos)
 		get_tree().reload_current_scene.call_deferred()
 	
-
+func impulso(altura):
+	velocity.y-=altura
 func _rotar(delta):
 	if not is_on_floor():
 		# 180° por salto aprox.
